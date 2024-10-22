@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+}
+
+main {
+    padding-top: 75px;
+}
+
+/* Estilos básicos para o header */
+header {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Colocar o header acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Certifica que o menu seja posicionado corretamente */
+}
+
+.header-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 55px;
+}
+
+.header-cta-group a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.header-cta-group button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+.header-cta-right button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.header-cta-right button:hover {
+    color: black;
+    background-color: white;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.header-cta-group, .header-cta-right {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; 
+    }
+
+    .header-cta-group, .header-cta-right {
+        display: none; 
+        flex-direction: column; /* Empilha os itens verticalmente */
+        background-color: #444;
+        width: 100%; /* O menu ocupa 100% da largura */
+        text-align: center;
+        position: absolute; /* Faz o menu aparecer abaixo do header */
+        top: 100%; /* Posiciona o menu logo abaixo do header */
+        left: 0;
+        z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+    }
+
+    /* Menu aparece quando ativado */
+    .header-container.active .header-cta-group, 
+    .header-container.active .header-cta-right {
+        display: flex;
+        flex-direction: column; /* Itens alinhados verticalmente */
+    }
+
+    .header-cta-group a {
+        margin: 10px 0; /* Deixa os links alinhados verticalmente */
+    }
+
+    .header-cta-right {
+        margin-top: 10px;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;  /* Distância do botão em relação à parte inferior da página */
+    right: 20px;   /* Distância do botão em relação à parte direita da página */
+    width: 60px;   /* Largura do ícone */
+    height: 60px;  /* Altura do ícone */
+    z-index: 1000; /* Garante que o botão fique sempre visível */
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;  /* Torna o ícone circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Adiciona uma sombra ao botão */
+}
+
+.whatsapp-button:hover {
+    opacity: 0.8;  /* Adiciona um efeito de hover */
+}
+
+
+/* Primeira Seção */
+.section-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura total do ecrã */
+    background-image: url('CABELOS\ FORTES\ E\ SAUDAVEL.png'); /* Substituir pelo caminho da imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    position: relative;
+    max-height: 400px;
+}
+
+.section-one::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.05); /* Overlay para melhorar a legibilidade */
+    z-index: 1;
+}
+
+.section-one .text-content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fica acima do overlay */
+    max-width: 800px; /* Limita a largura do conteúdo */
+}
+
+.section-one h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.section-one p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: white; /* Mantém o texto legível sobre o fundo */
+}
+
+/* Responsividade para ecrãs menores */
+@media (max-width: 768px) {
+    .section-one h1 {
+        font-size: 36px;
+    }
+
+    .section-one p {
+        font-size: 16px;
+    }
+}
+
+.product-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    width: 30%; /* Largura para os textos da esquerda e direita */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    width: auto; /* Define a largura conforme a imagem */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-item {
+    margin-bottom: 50px; /* Espaçamento entre os textos */
+    text-align: center;
+}
+
+.text-item h3 {
+    color: #ff5858;
+}
+
+/* .icon-grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-item img {
+    max-width: 50px;
+    margin-bottom: 10px;
+} */
+
+.botão-cta {
+    text-align: center;
+}
+
+.cta-comprar {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.cta-comprar:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .product-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-group {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image-container {
+        margin: 20px 0;
+    }
+
+    .icon-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+.active-ingredients {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.active-ingredients h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.active-ingredients p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ingredient-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-item h3 {
+    font-size: 18px;
+    color: #ff5858;
+    margin-bottom: 10px;
+}
+
+.ingredient-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .ingredients-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+.comparison-section {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.comparison-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.comparison-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.comparison-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.features {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-item {
+    display: flex;
+    font-size: 16px;
+}
+
+.check-icon {
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.x-icon {
+    color: red;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.image-comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-comparison img {
+    max-width: 300px;
+}
+
+.image-comparison span {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .comparison-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .features {
+        width: 100%;
+    }
+
+    .image-comparison {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+.kits-section {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.kits-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.kits-section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.kits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kit-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.kit-item h3 {
+    font-size: 20px;
+    color: #ff5858;
+    margin-bottom: 10px;
+}
+
+.kit-item p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.kit-item img {
+    width: 150px;  
+    max-height: 200px; 
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ffcc00;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+.buy-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .kits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer {
+    background-color: white;
+    padding: 40px 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-sections h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.payment-methods img,
+.social-media img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    background-color: white ;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+
