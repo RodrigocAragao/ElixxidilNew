@@ -85,14 +85,14 @@ header {
 
     .header-cta-group, .header-cta-right {
         display: none; 
-        flex-direction: column; /* Empilha os itens verticalmente */
+        flex-direction: column; 
         background-color: #444;
-        width: 100%; /* O menu ocupa 100% da largura */
+        width: 100%; 
         text-align: center;
-        position: absolute; /* Faz o menu aparecer abaixo do header */
-        top: 100%; /* Posiciona o menu logo abaixo do header */
+        position: absolute; 
+        top: 100%; 
         left: 0;
-        z-index: 1000; /* Garante que o menu fique acima de outros conteúdos */
+        z-index: 1000; 
     }
 
     /* Menu aparece quando ativado */
@@ -113,11 +113,11 @@ header {
 
 .whatsapp-button {
     position: fixed;
-    bottom: 20px;  /* Distância do botão em relação à parte inferior da página */
-    right: 20px;   /* Distância do botão em relação à parte direita da página */
-    width: 60px;   /* Largura do ícone */
-    height: 60px;  /* Altura do ícone */
-    z-index: 1000; /* Garante que o botão fique sempre visível */
+    bottom: 20px;  
+    right: 20px;   
+    width: 60px;   
+    height: 60px;  
+    z-index: 1000; 
 }
 
 .whatsapp-button img {
@@ -168,33 +168,14 @@ header {
     max-width: 800px; /* Limita a largura do conteúdo */
 }
 
-.section-one h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
 
-.section-one p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: white; /* Mantém o texto legível sobre o fundo */
-}
-
-/* Responsividade para ecrãs menores */
-@media (max-width: 768px) {
-    .section-one h1 {
-        font-size: 36px;
-    }
-
-    .section-one p {
-        font-size: 16px;
-    }
-}
 
 .product-section {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px;
+    justify-content: center;
+    
 }
 
 .text-group {
@@ -223,23 +204,9 @@ header {
     color: #ff5858;
 }
 
-/* .icon-grid {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding: 20px 0;
+.text-item p {
+    color: #666;
 }
-
-.icon-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.icon-item img {
-    max-width: 50px;
-    margin-bottom: 10px;
-} */
 
 .botão-cta {
     text-align: center;
@@ -252,7 +219,9 @@ header {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    width: 100%;
+    width: 200px;
+    border-radius: 30px;
+    margin-bottom: 15px;
 }
 
 .cta-comprar:hover {
@@ -268,15 +237,12 @@ header {
     .text-group {
         width: 100%;
         text-align: center;
+        order: 2;
     }
 
     .image-container {
         margin: 20px 0;
-    }
-
-    .icon-grid {
-        flex-direction: column;
-        align-items: center;
+        order: 1;
     }
 }
 
@@ -336,6 +302,7 @@ header {
 
 
 
+/* Estilos gerais da seção */
 .comparison-section {
     text-align: center;
     padding: 20px;
@@ -400,6 +367,7 @@ header {
     margin: 20px 0;
 }
 
+/* Ajustes de responsividade para telas menores */
 @media (max-width: 768px) {
     .comparison-content {
         flex-direction: column;
@@ -407,15 +375,180 @@ header {
     }
 
     .features {
-        width: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        order: 2;
+    }
+
+    .positive-features,
+    .negative-features {
+        width: 45%;
     }
 
     .image-comparison {
         flex-direction: row;
         justify-content: center;
         gap: 20px;
+        order: 1;
+    }
+
+    /* Organização dos itens positivos e negativos corretamente */
+    .positive-features .feature-item {
+        justify-content: flex-start;
+    }
+
+    .negative-features .feature-item {
+        justify-content: flex-start;
     }
 }
+
+
+/* Estilizando a sessão como um todo */
+.testimonials-section {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Estilo do cabeçalho da sessão */
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+/* Estilos do carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Imagens lado a lado em telas grandes */
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; /* Espaço entre imagens e depoimento */
+    flex-wrap: wrap;
+}
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column; /* Organiza imagens em telas menores */
+    gap: 10px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 150px;
+    height: auto;
+}
+
+.label {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+/* Seção de depoimentos */
+.review-section {
+    text-align: left;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.review-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.review-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.review-section small {
+    color: #999;
+}
+
+/* Botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Empilha imagens e depoimento em telas menores */
+        align-items: center;
+    }
+
+    .image-wrapper {
+        flex-direction: row; /* Coloca imagens lado a lado em telas pequenas */
+    }
+
+    .image-container img {
+        width: 100px;
+    }
+
+    .review-section {
+        text-align: center;
+        max-width: 90%;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
 
 .kits-section {
     text-align: center;
