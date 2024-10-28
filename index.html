@@ -199,7 +199,6 @@
             </div>
 
             <section class="testimonials-section">
-                <!-- Título e subtítulo -->
                 <div class="section-header">
                     <h2>Resultados que Você Pode Ver</h2>
                     <p>Veja como o Elixxidil tem ajudado nossos clientes a conquistar cabelos mais fortes e saudáveis.</p>
@@ -273,100 +272,12 @@
             </section>
 
             <section class="resultados-section">
-                <h2>Resultados de Eficácia Clínica</h2>
+                <h2>Resultados do Elixxidil</h2>
                 <canvas id="graficoEficacia"></canvas>
-            
-                <h2>Apreciabilidade Cosmética</h2>
+                <br>
+                <br>
                 <canvas id="graficoApreciabilidade"></canvas>
             </section>
-            
-              <script>
-                window.onload = function() {
-                  // Gráfico de Eficácia Clínica
-                  const ctxEficacia = document.getElementById('graficoEficacia').getContext('2d');
-                  new Chart(ctxEficacia, {
-                    type: 'bar',
-                    data: {
-                      labels: ['Quantidade de cabelos perdidos', 'Aparência geral dos cabelos'],
-                      datasets: [
-                        {
-                          label: 'Melhora',
-                          data: [66, 69],
-                          backgroundColor: 'rgba(131, 131, 131, 0.7)',
-                        },
-                        {
-                          label: 'Igual',
-                          data: [34, 31],
-                          backgroundColor: 'rgba(236, 155, 155, 0.7)',
-                        },
-                      ],
-                    },
-                    options: {
-                      responsive: true,
-                      scales: {
-                        y: {
-                          beginAtZero: true,
-                          max: 100,
-                          ticks: {
-                            callback: (value) => value + '%',
-                          },
-                        },
-                      },
-                      plugins: {
-                        legend: {
-                          position: 'top',
-                        },
-                      },
-                    },
-                  });
-            
-                  // Gráfico de Apreciabilidade Cosmética
-                  const ctxApreciabilidade = document.getElementById('graficoApreciabilidade').getContext('2d');
-                  new Chart(ctxApreciabilidade, {
-                    type: 'bar',
-                    data: {
-                      labels: [
-                        'Aumento na qntd de cabelos',
-                        'Fios mais grossos',
-                        'Aumento no volume',
-                        'Fortalecimento dos fios',
-                        'Estímulo ao crescimento',
-                        'Bom resultado',
-                        'Compraria o produto'
-                      ],
-                      datasets: [
-                        {
-                          label: 'Sim',
-                          data: [84, 78, 81, 81, 84, 81, 81],
-                          backgroundColor: 'rgba(131, 131, 131, 0.7)',
-                        },
-                        {
-                          label: 'Não',
-                          data: [16, 22, 19, 19, 16, 19, 19],
-                          backgroundColor: 'rgba(236, 155, 155, 0.7)',
-                        },
-                      ],
-                    },
-                    options: {
-                      responsive: true,
-                      scales: {
-                        y: {
-                          beginAtZero: true,
-                          max: 100,
-                          ticks: {
-                            callback: (value) => value + '%',
-                          },
-                        },
-                      },
-                      plugins: {
-                        legend: {
-                          position: 'top',
-                        },
-                      },
-                    },
-                  });
-                };
-              </script>
 
             <section class="kits-section">
                 <h2>Encontre o melhor kit para seus cabelos</h2>
