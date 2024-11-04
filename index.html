@@ -127,42 +127,39 @@
             <section class="comparison-section">
                 <h2>Compare e comprove: porque Elixxidil é o mais completo</h2>
                 <p>A tabela nutricional confirma, os resultados comprovam</p>
-            
+                
                 <div class="comparison-content">
-                    <!-- Características positivas -->
                     <div class="features positive-features">
-                        <div class="feature-item">
+                        <div class="feature-item1">
                             <span class="check-icon">✔</span>
                             <p>Sem efeito rebote</p>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item1">
                             <span class="check-icon">✔</span>
                             <p>Menor potencial alergenico</p>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item1">
                             <span class="check-icon">✔</span>
                             <p>Resultado em 4 semanas</p>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item1">
                             <span class="check-icon">✔</span>
                             <p>eXT. de algas marinhas</p>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item1">
                             <span class="check-icon">✔</span>
                             <p>Fórmula Inovadora</p>
                         </div>
-                        <div class="feature-item">
+                        <div class="feature-item1">
                             <span class="check-icon">✔</span>
                             <p>Aerossol</p>
                         </div>
                     </div>
-            
-                    <!-- Imagem central -->
+                    
                     <div class="image-comparison">
                         <img src="comparação.png" alt="New Hair">
                     </div>
             
-                    <!-- Características negativas -->
                     <div class="features negative-features">
                         <div class="feature-item">
                             <span class="x-icon">✘</span>
@@ -178,11 +175,11 @@
                         </div>
                         <div class="feature-item">
                             <span class="x-icon">✘</span>
-                            <p>Efeito shedding</p>
+                            <p>Deficiência nutricional</p>
                         </div>
                         <div class="feature-item">
                             <span class="x-icon">✘</span>
-                            <p>Deficiência nutricional</p>
+                            <p>Efeito shedding</p>
                         </div>
                         <div class="feature-item">
                             <span class="x-icon">✘</span>
@@ -265,69 +262,74 @@
                         </div>
                     </div>
             
-                    <!-- Botões de navegação -->
                     <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
                     <button class="next" onclick="moveSlide(1)">&#10095;</button>
                 </div>
             </section>
 
-            <section class="resultados-section">
-                <h2>Resultados do Elixxidil</h2>
-                <canvas id="graficoEficacia"></canvas>
-                <br>
-                <br>
-                <canvas id="graficoApreciabilidade"></canvas>
-            </section>
-
+            <div class="chart-container">
+                <canvas id="graficoEficacia" style="max-height: 400px;"></canvas>
+                <div class="chart-legend">
+                    <p><strong>1:</strong> Quantidade de cabelos perdidos após teste de tração positivo; <strong>2:</strong> Aparência geral dos cabelos</p>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="graficoAceitabilidade"></canvas>
+                <div class="chart-legend">
+                    <p><strong>1:</strong> Aumento na quantidade de cabelos; <strong>2:</strong> Fios mais grossos; <strong>3:</strong> Aumento no volume; <strong>4:</strong> Fortalecimento dos fios; <strong>5:</strong> Estímulo ao crescimento; <strong>6:</strong> Bom resultado; <strong>7:</strong> Compraria o produto</p>
+                </div>
+            </div>
+            
             <section class="kits-section">
                 <h2>Encontre o melhor kit para seus cabelos</h2>
                 <p>O custo-benefício que você merece está aqui, escolha</p>
             
                 <div class="kits-grid">
-                    <!-- Kit 1 -->
+                    <!-- Kit 1 corrigir valores-->
                     <div class="kit-item">
                         <h3>6 Elixxidil Dual action</h3>
                         <p>Vitaminas para cabelos, pele e unhas + Brinde</p>
                         <span class="discount">20% OFF</span>
                         <img src="Elixxidil6.png" alt="6 Elixxidil">
-                        <p>Preço no PIX R$ 347,23</p>
+                        <p>Preço no PIX R$ 330,72</p>
                         <p>ou em até 12x de <strong>R$ 36,55</strong></p>
                         <p>* Aqui sua compra é 100% segura, compre com tranquilidade.</p>
                         <button class="buy-button">COMPRE AGORA</button>
                     </div>
             
-                    <!-- Kit 2 -->
+                    <!-- Kit 2 corrigir valores-->
                     <div class="kit-item">
                         <h3>3 Elixxidil Dual action</h3>
                         <p>Vitaminas para cabelos, pele e unhas</p>
                         <span class="discount">15% OFF</span>
                         <img src="Elixxidil3.png" alt="3 Elixxidil">
-                        <p>Preço no PIX R$ 176,23</p>
+                        <p>Preço no PIX R$ 175,69</p>
                         <p>ou em até 12x de <strong>R$ 18,55</strong></p>
                         <p>* Aqui sua compra é 100% segura, compre com tranquilidade.</p>
                         <button class="buy-button">COMPRE AGORA</button>
                     </div>
             
-                    <!-- Kit 3 -->
+                    <!-- Kit 3 corrigir valores-->
                     <div class="kit-item">
                         <h3>2 Elixxidil Dual action</h3>
                         <p>Vitaminas para cabelos, pele e unhas</p>
                         <span class="discount">10% OFF</span>
                         <img src="Elixxdil2.png" alt="2 Elixxidil">
-                        <p>Preço no PIX R$ 176,23</p>
+                        <p>Preço no PIX R$ 124,02</p>
                         <p>ou em até 12x de <strong>R$ 18,55</strong></p>
                         <p>* Aqui sua compra é 100% segura, compre com tranquilidade.</p>
                         <button class="buy-button">COMPRE AGORA</button>
                     </div>
             
-                    <!-- Kit 4 -->
+                    <!-- Kit 4 corrigir valores-->
                     <div class="kit-item">
                         <h3>1 Elixxidil Dual action</h3>
                         <p>Vitaminas para cabelos, pele e unhas</p>
                         <span class="discount">5% OFF</span>
                         <img src="ELIXXIDIL_SITE-removebg-preview.png" alt="1 Elixxidil">
-                        <p>Preço no PIX R$ 109,73</p>
-                        <p>ou em até 12x de <strong>R$ 11,55</strong></p>
+                        <p>Preço no PIX R$ 65,45</p>
+                        <p>ou em até 2x de <strong>R$ 34,45</strong></p>
                         <p>* Aqui sua compra é 100% segura, compre com tranquilidade.</p>
                         <button class="buy-button">COMPRE AGORA</button>
                     </div>
@@ -358,6 +360,18 @@
                         <p>comercial@priime.com.br</p>
                     </div>
                 </div>
+
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=qqFeTk9zS6AhzsSt7"
+                        width="100%"
+                        height="250"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
         
                 <div class="footer-bottom">
                     <p>Copyright © PRIIME VIDA E SAÚDE LTDA. Todos os direitos reservados.</p>

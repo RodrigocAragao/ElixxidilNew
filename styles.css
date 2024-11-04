@@ -132,7 +132,6 @@ header {
     opacity: 0.8;  /* Adiciona um efeito de hover */
 }
 
-
 /* Primeira Seção */
 .section-one {
     display: flex;
@@ -144,9 +143,9 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 60px 20px; /* Espaçamento interno */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
+    padding: 60px 20px;
+    color: white; 
+    text-align: center; 
     position: relative;
     max-height: 400px;
 }
@@ -158,36 +157,33 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.05); /* Overlay para melhorar a legibilidade */
+    background-color: rgba(0, 0, 0, 0.05); 
     z-index: 1;
 }
 
 .section-one .text-content {
     position: relative;
-    z-index: 2; /* Garante que o texto fica acima do overlay */
-    max-width: 800px; /* Limita a largura do conteúdo */
+    z-index: 2; 
+    max-width: 800px;
 }
-
-
 
 .product-section {
     display: flex;
     align-items: center;
     padding: 20px;
     justify-content: center;
-    
 }
 
 .text-group {
     display: flex;
     flex-direction: column;
-    width: 30%; /* Largura para os textos da esquerda e direita */
+    width: 30%; 
 }
 
 .image-container {
     display: flex;
     justify-content: center;
-    width: auto; /* Define a largura conforme a imagem */
+    width: auto; 
 }
 
 .image-container img {
@@ -196,7 +192,7 @@ header {
 }
 
 .text-item {
-    margin-bottom: 50px; /* Espaçamento entre os textos */
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -245,9 +241,6 @@ header {
         order: 1;
     }
 }
-
-
-
 
 .active-ingredients {
     text-align: center;
@@ -298,11 +291,6 @@ header {
     }
 }
 
-
-
-
-
-/* Estilos gerais da seção */
 .comparison-section {
     text-align: center;
     padding: 20px;
@@ -339,10 +327,16 @@ header {
     font-size: 16px;
 }
 
+.feature-item1 {
+    display: flex;
+    font-size: 16px;
+    flex-direction: row-reverse;
+}
+
 .check-icon {
     color: green;
     font-weight: bold;
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .x-icon {
@@ -367,44 +361,32 @@ header {
     margin: 20px 0;
 }
 
-/* Ajustes de responsividade para telas menores */
 @media (max-width: 768px) {
     .comparison-content {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .features {
-        width: 50%;
-        display: flex;
-        justify-content: space-between;
-        order: 2;
-    }
-
-    .positive-features,
-    .negative-features {
-        width: 45%;
+        display: grid;
+        grid-template-rows: auto 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
 
     .image-comparison {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        order: 1;
+        grid-column: 1 / -1;
+        order:-1
     }
 
-    /* Organização dos itens positivos e negativos corretamente */
-    .positive-features .feature-item {
-        justify-content: flex-start;
+    .positive-features {
+        grid-column: 1;
+        width: 100%;
+        text-align:right;
     }
-
-    .negative-features .feature-item {
-        justify-content: flex-start;
+    .negative-features {
+        grid-column: 2;
+        width: 100%;
+        text-align:left;
     }
 }
 
-
-/* Estilizando a sessão como um todo */
+/*  */
 .testimonials-section {
     width: 100%;
     padding: 40px 20px;
@@ -412,7 +394,6 @@ header {
     text-align: center;
 }
 
-/* Estilo do cabeçalho da sessão */
 .section-header h2 {
     font-size: 24px;
     font-weight: bold;
@@ -426,7 +407,6 @@ header {
     margin-bottom: 30px;
 }
 
-/* Estilos do carrossel */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -447,18 +427,17 @@ header {
     padding: 20px;
 }
 
-/* Imagens lado a lado em telas grandes */
 .content-wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px; /* Espaço entre imagens e depoimento */
+    gap: 20px; 
     flex-wrap: wrap;
 }
 
 .image-wrapper {
     display: flex;
-    flex-direction: column; /* Organiza imagens em telas menores */
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -502,7 +481,6 @@ header {
     color: #999;
 }
 
-/* Botões de navegação */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -523,15 +501,14 @@ header {
     right: 10px;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; /* Empilha imagens e depoimento em telas menores */
+        flex-direction: column; 
         align-items: center;
     }
 
     .image-wrapper {
-        flex-direction: row; /* Coloca imagens lado a lado em telas pequenas */
+        flex-direction: row;
     }
 
     .image-container img {
@@ -549,14 +526,44 @@ header {
     padding: 20px;
     text-align: center;
 }
-  
-  .resultados-section canvas {
-    max-width: 100%;
-    height: auto;
 
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-  
 
+#graficoEficacia {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px; /* Altura máxima para garantir a visibilidade */
+}
+
+#graficoAceitabilidade {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px; /* Altura máxima para garantir a visibilidade */
+}
+
+.chart-legend {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.chart-legend p {
+    margin: 0;
+    font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+/* kits-section */
 .kits-section {
     text-align: center;
     padding: 30px;
@@ -608,18 +615,16 @@ header {
     margin-bottom: 10px;
 }
 
-
 .discount {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #ffcc00;
+    background-color: rgba(255, 230, 0, 0.7);
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
 }
-
 
 .buy-button {
     background-color: #28a745;
@@ -642,6 +647,7 @@ header {
     }
 }
 
+/* footer section */
 .footer {
     background-color: white;
     padding: 40px 0;

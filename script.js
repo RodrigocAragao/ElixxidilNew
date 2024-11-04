@@ -20,33 +20,42 @@ function moveSlide(step) {
 
 
 window.onload = function() {
-
+    // Gráfico de Resultados de Eficácia Clínica
     const ctxEficacia = document.getElementById('graficoEficacia').getContext('2d');
     new Chart(ctxEficacia, {
         type: 'bar',
         data: {
-            labels: ['Quantidade de cabelos perdidos', 'Aparência geral dos cabelos'],
+            labels: ['1', '2'], // Números representando as categorias
             datasets: [
                 {
                     label: 'Melhora',
-                    data: [66, 69],
+                    data: [70, 75],
                     backgroundColor: 'rgba(75, 192, 192, 0.7)',
                 },
                 {
                     label: 'Igual',
-                    data: [34, 31],
+                    data: [30, 25],
                     backgroundColor: 'rgba(255, 168, 168, 0.7)',
                 }
             ]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Permite que a altura se ajuste de acordo com o canvas
+            indexAxis: 'y', // Exibe as barras horizontalmente
             scales: {
-                y: {
+                x: {
                     beginAtZero: true,
                     max: 100,
                     ticks: {
                         callback: (value) => value + '%',
+                    },
+                },
+                y: {
+                    ticks: {
+                        font: {
+                            size: 12
+                        }
                     }
                 }
             },
@@ -56,61 +65,55 @@ window.onload = function() {
                 },
                 title: {
                     display: true,
-                    text: 'Eficácia Clínica',
+                    text: 'Resultados de Eficácia Clínica',
                     font: {
-                      size: 16,
+                        size: 16,
                     }
+                }
+            },
+            elements: {
+                bar: {
+                    barThickness: 25 // Reduz a espessura das barras para caber melhor
                 }
             }
         }
-    })
-            
-                  // Gráfico de Apreciabilidade Cosmética
-    const ctxApreciabilidade = document.getElementById('graficoApreciabilidade').getContext('2d');
-    new Chart(ctxApreciabilidade, {
+    });
+
+    // Gráfico de Apreciabilidade Cosmética
+    const ctx = document.getElementById('graficoAceitabilidade').getContext('2d');
+    new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: [
-                'Aumento na quantidade de cabelos',
-                'Fios mais grossos',
-                'Aumento no volume',
-                'Fortalecimento dos fios',
-                'Estímulo ao crescimento',
-                'Bom resultado',
-                'Compraria o produto'
-            ],
+            labels: ['1', '2', '3', '4', '5', '6', '7'], // Números representando as categorias
             datasets: [
                 {
                     label: 'Sim',
-                    data: [84, 78, 81, 81, 84, 81, 81],
+                    data: [80, 60, 70, 75, 65, 85, 90],
                     backgroundColor: 'rgba(75, 192, 192, 0.7)',
                 },
                 {
                     label: 'Não',
-                    data: [16, 22, 19, 19, 16, 19, 19],
+                    data: [20, 40, 30, 25, 35, 15, 10],
                     backgroundColor: 'rgba(255, 168, 168, 0.7)',
                 }
             ]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false, // Permite que a altura se ajuste de acordo com o canvas
+            indexAxis: 'y',
             scales: {
-                y: {
+                x: {
                     beginAtZero: true,
                     max: 100,
                     ticks: {
                         callback: (value) => value + '%',
                     },
                 },
-                x: {
+                y: {
                     ticks: {
-                        maxRotation: 90,
-                        minRotation: 90,
-                        callback: function(value) {
-                            const words = this.getLabelForValue(value).split(' ');
-                            return words.reduce((acc, word, index) => {
-                                return acc + (index % 2 === 0 ? '\n' : ' ') + word;
-                            })
+                        font: {
+                            size: 12
                         }
                     }
                 }
@@ -123,11 +126,16 @@ window.onload = function() {
                     display: true,
                     text: 'Avaliação de Aceitabilidade e Resultados Percebidos',
                     font: {
-                      size: 16,
+                        size: 16,
                     }
+                }
+            },
+            elements: {
+                bar: {
+                    barThickness: 25 // Reduz a espessura das barras para caber melhor
                 }
             }
         }
-    })
+    });
 }
             
