@@ -30,12 +30,12 @@ window.onload = function() {
                 {
                     label: 'Melhora',
                     data: [70, 75],
-                    backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                    backgroundColor: 'rgba(141, 140, 140, 0.5)',
                 },
                 {
                     label: 'Igual',
                     data: [30, 25],
-                    backgroundColor: 'rgba(255, 168, 168, 0.7)',
+                    backgroundColor: 'rgba(255, 168, 168, 0.5)',
                 }
             ]
         },
@@ -89,12 +89,12 @@ window.onload = function() {
                 {
                     label: 'Sim',
                     data: [80, 60, 70, 75, 65, 85, 90],
-                    backgroundColor: 'rgba(75, 192, 192, 0.7)',
+                    backgroundColor: 'rgba(141, 140, 140, 0.5)',
                 },
                 {
                     label: 'Não',
                     data: [20, 40, 30, 25, 35, 15, 10],
-                    backgroundColor: 'rgba(255, 168, 168, 0.7)',
+                    backgroundColor: 'rgba(255, 168, 168, 0.5)',
                 }
             ]
         },
